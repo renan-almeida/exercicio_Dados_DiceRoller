@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceRoller.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="150"
+            Padding="70"
+            HorizontalOptions="Center">
+
+            <Label Text="Rolador de Dados"
+                   FontSize="Header"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"/>
+
+        <VerticalStackLayout
+            Spacing="60"
+            HorizontalOptions="Center">
+
+                <Label
+                x:Name="ResultLabel"
+                Text="6"
+                FontSize="90"
+                HorizontalOptions="Center"/>
+
+                <Picker
+                WidthRequest="300"
+                Title="Selecione um número"
+                x:Name="SidesPicker">
+
+                    <Picker.Items>
+                        <x:String>4</x:String>
+                        <x:String>6</x:String>
+                        <x:String>8</x:String>
+                        <x:String>10</x:String>
+                        <x:String>12</x:String>
+                        <x:String>14</x:String>
+                        <x:String>20</x:String>
+                        <x:String>24</x:String>
+                        <x:String>30</x:String>
+                        <x:String>60</x:String>
+                        <x:String>100</x:String>
+                    </Picker.Items>
+                    
+                </Picker>
+
+                <Label Text="Insira a quantidade de Dados"
+                        HorizontalTextAlignment="Center"/>
+
+                <Entry
+                 x:Name="DiceEntry"
+     
+                                 />
+
+
+                <Label Text="Insira o Modificador"
+                        HorizontalTextAlignment="Center"/>
+
+                <Entry
+                 x:Name="ModifierEntry"/>
+
+                <Label
+                    x:Name="Exibition"
+                    Text="Você tirou : "/>
+
+
+
+                <Button x:Name="RollButton"
+                        Text="Rolar o Dado"
+                        BackgroundColor="Gray"
+                        WidthRequest="250"
+                        Clicked="RollButton_Clicked"/>
+
+               
+
+            </VerticalStackLayout>
+        
+
+
+
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
